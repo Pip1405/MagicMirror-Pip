@@ -1,0 +1,427 @@
+
+/* MagicMirror² Custom CSS Sample */
+
+:root {
+  --color-text: #999;
+  --color-text-dimmed: #666;
+  --color-text-bright: #fff;
+  --color-background: black;
+  --font-primary: "Roboto Condensed";
+  --font-secondary: "Roboto";
+  --font-size: 20px;
+  --font-size-small: 0.75rem;
+  --gap-body-top: 60px;
+  --gap-body-right: 60px;
+  --gap-body-bottom: 60px;
+  --gap-body-left: 60px;
+  --gap-modules: 30px;
+}
+
+/* Globale Anpassung der Margin für alle Module */
+.module {
+  margin: -35px; /* oder einen anderen gewünschten Wert */
+}
+.normal,
+.dimmed,
+header,
+body {
+    color: #fff;
+}
+
+
+
+
+.module.clock .time {
+  font-size: 100px;
+}
+
+.module.clock .date {
+  font-size: 50px;
+}
+
+
+/* CAROUSEL */
+.slider-pagination label {
+  width: 15px;  /* Erhöhen Sie die Breite */
+  height: 15px; /* Erhöhen Sie die Höhe */
+  border-radius: 50%;
+  display: inline-block;
+  background: rgb(255 255 255 / 20%);
+  margin: 0 2px;
+  border: solid 1px rgb(255 255 255 / 40%);
+  cursor: pointer !important;
+}
+
+
+
+
+/* NEWSFEED */
+.newsfeed .newsfeed-title,
+.newsfeed .newsfeed-desc,
+.newsfeed .newsfeed-source {
+  font-size: 30px;
+  max-width: 700px;
+}
+.newsfeed {
+ margin-top: 60px;
+}
+
+
+
+/* NOTION  */
+/* Adjustments for Notion Container and Text */
+#mmm-notion {
+  /*width: 800px;*/
+  max-width: 1400px; /* Fixed width for Notion container */
+  overflow: hidden;
+}
+
+#mmm-notion * {
+  font-size: 25px; /* Font size for all text within Notion container */
+}
+
+/* Adjustments for List Name */
+#mmm-notion-database-title {
+  font-size: 30px; /* Larger font size for list name */
+  padding-bottom: 0;
+  font-weight: bold;
+  text-align: left;
+}
+#mmm-notion-listview #mmm-notion-property {
+  display: flex;
+  flex-direction: row;
+  gap: 6px; /* Increased gap from 6px to 12px for more space */
+  align-items: center;
+  flex-shrink: 0;
+}
+
+#mmm-notion-property-status {
+  margin-left: 0px; /* Adding a left margin specifically to the status property */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 4px;
+  border-radius: 20%;
+}
+#mmm-notion-listview-titleContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin-right: 30px; /* Adjusted margin-right to create space on the right side of the title */
+  flex-shrink: 0;
+}
+
+
+
+
+/* CALENDAREXT3  */
+.CX3 {
+  width: 1200px;
+  margin-bottom: -45px; /* Verringert den unteren Außenabstand */
+  /*margin-left: -25px;   /* Verringert den linken Außenabstand */
+  /*margin-right: -25px;  /* Verringert den rechten Außenabstand */
+  /*margin-top: 80px;*/
+}
+.CX3 .today .cellDate {
+  font-weight: bold;
+  background-color: white;
+  color: black;
+  border-radius: 12px;
+  padding: 4px 8px;
+  margin: 0px;
+  line-height: 15px;
+}
+.CX3 .cellHeader {
+  line-height: normal; /* Adjust this value as needed */
+  /* Other existing styles... */
+}
+
+.CX3 .thisMonth {
+  background-color: rgb(255 255 255 / 10%);
+}
+.CX3 .eventContainer {
+  z-index: 20;
+  position: absolute;
+  bottom: var(--cellfooterheight);
+  left: 0;
+  width: 100%;
+  top: 25px; /* Ensure the event container starts after the header */
+}
+.CX3 .event {
+  margin: 4px 2px; /* Adjust top and bottom margin as needed */
+  padding: 0 2px;
+  text-align: left;
+  grid-row: span 1;
+  color: var(--defaultcolor);
+  display: flex;
+  justify-content: flex-start;
+  gap: 2px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  min-width: 0;
+  position: relative;
+}
+
+
+
+/* DWD WARNWEATHER */
+.MMM-DWD-WarnWeather .wrapper {
+  width: 100%; /* Breite des Moduls auf 400px festlegen */
+  text-align: right; /* Text insgesamt rechts ausrichten */
+}
+.MMM-DWD-WarnWeather .status,
+.MMM-DWD-WarnWeather .description {
+  font-size: 25px; /* Textgröße auf 25px einstellen */
+  text-align: right; /* Text rechts ausrichten */
+  /* Restliche Stile beibehalten */
+}
+/* Erhöht den Abstand zwischen den Modulen */
+.MMM-DWD-WarnWeather {
+  margin-bottom: 80px !important; /* oder ein Wert nach Wahl */
+}
+.MMM-DWD-WarnWeather .displaytitle {
+  font-size: 30px; /* Größere Schriftgröße für den Titel */
+}
+.MMM-DWD-WarnWeather header {
+  font-size: 30px !important;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+}
+
+
+/* AVSTOCK */
+#AVSTOCK .tagline {
+  display: none;
+}
+/* Optional: Anpassen der Schriftgröße für spezifische Elemente innerhalb von AVStock, falls erforderlich */
+#AVSTOCK .stock_item,
+#AVSTOCK .changeP,
+#AVSTOCK .price,
+#AVSTOCK .symbol,
+#AVSTOCK .tagline,
+#AVSTOCK .table-header-item,
+#AVSTOCK .stock_item > div {
+  font-size: 15px;
+}
+#AVSTOCK .grid-wrapper .stock_item {
+  width: 160px;
+  margin-bottom: 50px;
+}
+#AVSTOCK .change,
+#AVSTOCK .changeP {
+  margin-right: 20px; /* Reduziert den rechten Abstand */
+  margin-left: -10px; /* Reduziert den linken Abstand */
+  font-size: 12px;
+  padding-left: -10px;
+}
+#AVSTOCK .stock_item > .symbol {
+  padding-right: 0px; /* Reduziert den rechten Padding des Asset-Titels */
+}
+
+#AVSTOCK .stock_item > .price {
+  padding-left: 0px; /* Reduziert den linken Padding des Preises */
+}
+
+
+.MMM-FearAndGreedIndex{
+  margin-top: 80px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* AIRQUALITY */
+.MMM-AirQuality {
+  width: 500px;
+  /*margin-top: 1000px;*/
+}
+.MMM-AirQuality .module-header {
+  font-size: 30px;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+}
+.MMM-AirQuality div {
+  font-size: 25px !important;
+}
+
+.MMM-AirQuality .xsmall,
+.MMM-AirQuality .small,
+.MMM-AirQuality .medium,
+.MMM-AirQuality .large,
+.MMM-AirQuality .bright,
+.MMM-AirQuality .normal,
+.MMM-AirQuality .dimmed {
+  font-size: 25px;
+}
+
+
+
+/* Anpassung der Breite, Schriftgröße und Platzierung für MMM-WeatherDependentClothes */
+.MMM-WeatherDependentClothes {
+  width: 100%; /* Setzt die Breite auf maximal 600px */
+  margin-top: 220px; /* Schiebt das Modul von oben nach unten */
+  margin-left: 300px; /* Falls nötig, um das Modul von der linken Seite zu verschieben */
+  margin-right: 20px; /* Falls nötig, um das Modul von der rechten Seite zu verschieben */
+}
+
+
+
+
+
+/* Set maximum width for the NEWS module and adjust font sizes */
+#NEWS {
+  max-width: 750px; /* Set the maximum width of the module */
+  font-size: 25px; /* Set the default font size for content */
+}
+
+/* Style for the header with larger text */
+#NEWS .header .title {
+  font-size: 27px; /* Set the font size for the header */
+  color: #FFF; /* Set the color of the header text, if needed */
+}
+
+/* Ensure the content is left-aligned and has the correct font size */
+#NEWS.horizontal .content,
+#NEWS.vertical .content {
+  text-align: left; /* Align the text to the left */
+  font-size: 18px; /* Set the font size for the content */
+  display: flex; /* Use flexbox to layout the image and text side by side */
+  align-items: center; /* Align the items vertically */
+}
+
+/* Adjust the article image to sit next to the text */
+#NEWS.horizontal .content .articleImage,
+#NEWS.vertical .content .articleImage {
+  float: none; /* Disable floating to work with flexbox */
+  max-width: 15vw; /* Maximum width relative to the viewport width */
+  max-height: 15vh; /* Maximum height relative to the viewport height */
+  width: auto; /* Scale width automatically to maintain aspect ratio */
+  height: auto; /* Scale height automatically to maintain aspect ratio */
+  margin-right: 10px; /* Margin to separate image from text */
+}
+
+/* Hide touch controls as they may interfere with layout */
+#NEWS_TOUCH_PREVIOUS,
+#NEWS_TOUCH_NEXT {
+  display: none; /* Hide the touch controls */
+}
+
+
+
+
+
+/* BACKGROUND SLIDESHOW */
+.MMM-BackgroundSlideshow .image {
+  opacity: 0.5; /* Stellen Sie diesen Wert zwischen 0 (vollständig transparent) und 1 (vollständig undurchsichtig) ein, je nach gewünschter Transparenz */
+}
+
+
+
+
+
+
+/* OPENWEATHERMAPFORECAST */
+/* Anpassen der Breite des Modulinhalts */
+.MMM-OpenWeatherMapForecast .module-content {
+  width: 900px;
+  margin-bottom: -45px; /* Verringert den unteren Außenabstand */
+}
+
+/* Anpassen der Schriftgröße für den Header */
+.MMM-OpenWeatherMapForecast .module-header {
+  font-size: 30px;
+  margin-top: 70px; 
+/* padding-bottom: 25px;
+}
+
+/* Größe der Inline-Icons für Niederschlag und Wind */
+.MMM-OpenWeatherMapForecast .inline-icon {
+  width: 30px; /* Anpassung an die gewünschte Größe */
+  height: 30px; /* Anpassung an die gewünschte Größe */
+}
+
+/* Textgröße für den Status der aktuellen Bedingungen */
+.MMM-OpenWeatherMapForecast .current-conditions-wrapper .current {
+  font-size: 18px; /* Anpassung an die gewünschte Schriftgröße */
+}
+
+/* Anpassen der Schriftgröße und des Icon-Layouts im Forecast-Bereich */
+/* Redundanz entfernt, nur eine Liste von Selektoren notwendig */
+.MMM-OpenWeatherMapForecast .wrapper.tiled .forecast-container .forecast-item .time,
+.MMM-OpenWeatherMapForecast .wrapper.tiled .forecast-container .forecast-item .day-name,
+.MMM-OpenWeatherMapForecast .wrapper.tiled .forecast-container .forecast-item .wind-speed,
+.MMM-OpenWeatherMapForecast .wrapper.tiled .forecast-container .forecast-item .wind-gusts,
+.MMM-OpenWeatherMapForecast .wrapper.tiled .forecast-container .forecast-item .temperature,
+.MMM-OpenWeatherMapForecast .wrapper.tiled .forecast-container .forecast-item .precipitation-container,
+.MMM-OpenWeatherMapForecast .wrapper.tiled .forecast-container .forecast-item .wind-container {
+  font-size: 18px; /* Größe der Schrift anpassen */
+}
+
+/* Schriftgröße für Höchst- und Tiefsttemperatur */
+.MMM-OpenWeatherMapForecast .high-temperature, 
+.MMM-OpenWeatherMapForecast .low-temperature {
+  font-size: 18px; /* Anpassung an die gewünschte Größe */
+}
+
+/* Anpassen der Größe der Wettericons im Forecast-Bereich */
+.MMM-OpenWeatherMapForecast .wrapper.tiled .forecast-container .forecast-item .forecast-icon {
+  width: 40px; /* Breite des Icons */
+  height: 40px; /* Höhe des Icons */
+}
+
+/* Erhöht den Abstand zwischen den Wettereinträgen, falls benötigt */
+.MMM-OpenWeatherMapForecast .wrapper.tiled .forecast-container .forecast-item {
+  padding: 10px; /* Erhöhen des Abstands */
+}
+
+/* Anpassen der Schriftgröße und des Layouts für die aktuellen Bedingungen */
+.MMM-OpenWeatherMapForecast .current-conditions-wrapper .current.temperature,
+.MMM-OpenWeatherMapForecast .current-conditions-wrapper .current.feelslike,
+.MMM-OpenWeatherMapForecast .current-conditions-wrapper .icon {
+  font-size: 30px; /* Größe der Schrift für Temperatur */
+  width: 50px; /* Breite des Icons */
+  height: 50px; /* Höhe des Icons */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* BACKGROUND SLIDESHOW */
+.MMM-BackgroundSlideshow .image {
+  position: relative;
+  opacity: 0.2;
+}
+
+.MMM-BackgroundSlideshow .image:after {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+  pointer-events: none;
+}
+
+/* RAINMAP */
+/*.MMM-RAIN-MAP .rain-map-wrapper {
+  margin-right: 0px;
+  margin-bottom: -100px;
+}*/
+
+
+
+
+
+

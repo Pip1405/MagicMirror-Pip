@@ -1,0 +1,218 @@
+/* MagicMirror² Custom CSS Sample
+ *
+ * Change color and fonts here.
+ *
+ * Beware that properties cannot be unitless, so for example write '--gap-body: 0px;' instead of just '--gap-body: 0;'
+ *
+ * MIT Licensed.
+ */
+
+/* Uncomment and adjust accordingly if you want to import another font from the google-fonts-api: */
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;700&display=swap'); */
+
+:root {
+  --color-text: #999;
+  --color-text-dimmed: #666;
+  --color-text-bright: #fff;
+  --color-background: black;
+
+  --font-primary: "Roboto Condensed";
+  --font-secondary: "Roboto";
+  
+  --font-size: 20px;
+  --font-size-small: 0.75rem;
+
+  --gap-body-top: 60px;
+  --gap-body-right: 60px;
+  --gap-body-bottom: 60px;
+  --gap-body-left: 60px;
+  
+  --gap-modules: 30px;
+}
+.MMM-OpenWeatherMapForecast .module-content {
+  width: 800px; /* adjust this to taste */
+}
+
+.module.clock .time {
+  font-size: 250px; /* Ändern Sie diesen Wert, um die Größe der Uhrzeit anzupassen */
+}
+
+.module.clock .date {
+  font-size: 80px; /* Ändern Sie diesen Wert, um die Größe des Datums anzupassen */
+}
+
+
+
+
+/* NEWSFEED  */
+/* Anpassung der Textgröße im Newsfeed-Modul */
+.newsfeed .newsfeed-title {
+    font-size: 60px; /* Größe der Titel */
+}
+.newsfeed .newsfeed-desc {
+    font-size: 60px; /* Größe der Beschreibung */
+}
+.newsfeed .newsfeed-source {
+    font-size: 45px; /* Größe der Quellenangabe */
+}
+
+
+
+
+/* TODOist*/
+/* Increase the font size of the task text */
+.module.MMM-Todoist .divTableCell {
+  font-size: 24px; /* Adjust the font size as needed */
+}
+/* Increase the width of the todoist module */
+.module.MMM-Todoist {
+  width: 600px; /* or any value that fits well in your layout */
+}
+
+
+
+
+/* OPENWEATHERMAPFORECAST  */
+.MMM-OpenWeatherMapForecast .module-content {
+    width: 1300px; /* Erhöhen Sie diese Größe nach Bedarf */
+}
+/* Anpassung der Schriftgröße für Temperaturen und andere Textelemente */
+.MMM-OpenWeatherMapForecast .forecast-container .forecast-item .temperature,
+.MMM-OpenWeatherMapForecast .forecast-container .forecast-item .temperature-container,
+.MMM-OpenWeatherMapForecast .wrapper.tiled .forecast-container .forecast-item .time,
+.MMM-OpenWeatherMapForecast .wrapper.tiled .forecast-container .forecast-item .day-name,
+.MMM-OpenWeatherMapForecast .wrapper.table .forecast-container .forecast-item>span {
+    font-size: 60px;
+}
+
+/* Anpassung der Größe der Wetter-Icons */
+.MMM-OpenWeatherMapForecast .current-conditions-wrapper .icon,
+.MMM-OpenWeatherMapForecast .wrapper.tiled .forecast-container .forecast-item .forecast-icon {
+    width: 100px;  /* Breite des Icons */
+    height: 100px; /* Höhe des Icons */
+}
+
+/* Anpassung der Schriftgröße für den Header */
+.MMM-OpenWeatherMapForecast .module-header {
+    font-size: 45px;
+}
+.MMM-OpenWeatherMapForecast .temperature {
+    font-size: 30px; /* Anpassen nach Wunsch */
+}
+
+.MMM-OpenWeatherMapForecast .temperature-container .high-temperature,
+.MMM-OpenWeatherMapForecast .temperature-container .low-temperature {
+    font-size: 25px; /* Anpassen nach Wunsch */
+}
+
+.MMM-OpenWeatherMapForecast .precipitation-container .precipitation {
+    font-size: 25px; /* Anpassen nach Wunsch */
+}
+/* Für DWD-WarnWeather, falls es einen Header gibt. */
+.MMM-OpenWeatherMapForecast header {
+    margin-bottom: 25px; /* Anpassen nach Wunsch */
+}
+
+
+
+
+/*RAINMAP*/
+.MMM-RAIN-MAP .rain-map-wrapper {
+    width: 1300px; /* Erhöhen Sie die Breite */
+    height: 1300px; /* Erhöhen Sie die Höhe */
+}
+
+
+
+
+
+
+/* DWD WARNWEATHER  */
+.MMM-DWD-WarnWeather .displaytitle {
+    font-size: 45px !important;
+}
+/* Anpassen der Schriftgröße für den inneren Header */
+.MMM-DWD-WarnWeather .description {
+  font-size: 45px;
+  line-height: 50px; /* Einstellen des Zeilenabstandes, falls notwendig */
+
+}
+/* Anpassen der Schriftgröße für die Warnmeldungen */
+.MMM-DWD-WarnWeather .status {
+  font-size: 45px;
+  line-height: 55px; /* Einstellen des Zeilenabstandes, falls notwendig */
+}
+/* Anpassen der Größe des Warnsymbols */
+.MMM-DWD-WarnWeather .weathericon {
+  width: 500px; /* Größe nach Bedarf anpassen */
+  height: 500px; /* Größe nach Bedarf anpassen */
+}
+/* Anpassen der Schriftgröße des Textes "WETTERWARNUNGEN" */
+.MMM-DWD-WarnWeather .warning { /* oder eine andere Klasse, falls der Text durch eine andere Klasse gesteuert wird */
+  font-size: 60px !important;
+}
+
+
+
+
+
+/* AIRQUALITY  */
+/* Anpassen der Schriftgröße für MMM-AirQuality */
+.MMM-AirQuality header, .MMM-AirQuality .module-header {
+  font-size: 45px !important;
+}
+.MMM-AirQuality .content, /* Ersetzen Sie .content durch die tatsächliche Klasse/ID des Inhalts */
+.MMM-AirQuality div {
+  font-size: 45px !important;
+}
+.MMM-AirQuality header, .MMM-DWD-WarnWeather header, .MMM-OpenWeatherMapForecast header {
+    margin-bottom: 25px; /* Anpassen nach Wunsch */
+    padding-bottom: 25px; /* Falls margin-bottom nicht ausreicht, probieren Sie es mit padding-bottom */
+}
+.MMM-AirQuality {
+  padding-right: 40px; /* Stellen Sie sicher, dass ein ausreichender Seitenabstand besteht */
+}
+
+
+
+/* AVSTOCK  */
+#AVSTOCK .tagline {
+  display: none;
+}
+.MMM-NewsAPI {
+  width: 850px;
+}
+.MMM-BackgroundSlideshow .image {
+  position: relative;
+  opacity: 0.2; /* 50% transparency, change as needed */
+}
+
+.MMM-BackgroundSlideshow .image:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)); /* semi-transparent black gradient */
+  pointer-events: none;
+}
+
+.region.top.right .module.MMM-DWD-WarnWeather {
+  display: inline-block;
+  width: calc(50% - 20px); /* Adjust the width as necessary */
+  margin-right: 20px; /* This adds a 20px margin to the right side of the weather module */
+  vertical-align: top; /* Aligns the content to the top */
+}
+
+.region.top.right .module.MMM-AirQuality {
+  display: inline-block;
+  width: calc(50% - 20px); /* Adjust the width as necessary */
+  margin-left: 20px; /* This adds a 20px margin to the left side of the air quality module */
+  vertical-align: top; /* Aligns the content to the top */
+}
+
+/* If you want to ensure they don't wrap to the next line */
+.region.top.right {
+  white-space: nowrap;
+}

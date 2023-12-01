@@ -1,0 +1,28 @@
+{
+  "name": "MMM-News",
+  "version": "2.1.5+EOL",
+  "description": "MagicMirror module - displaying news articles with Newsapi.org API V2",
+  "main": "MMM-News.js",
+  "keywords": [
+    "magic mirror",
+    "module",
+    "news",
+    "news.api"
+  ],
+  "author": [
+    "bugsounet",
+    "eouia"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mumblebaj/MMM-News"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mumblebaj/MMM-News"
+  },
+  "homepage": "https://github.com/mumblebaj/MMM-News",
+  "dependencies": {
+    "node-fetch": "^2.6.7"
+  }
+}

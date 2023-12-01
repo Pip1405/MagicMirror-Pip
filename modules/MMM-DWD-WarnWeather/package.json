@@ -1,0 +1,24 @@
+{
+  "name": "mmm-dwd-warnweather",
+  "version": "1.0.0",
+  "description": "bla",
+  "main": "MMM-DWD-WarnWeather.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LukeSkywalker92/MMM-DWD-WarnWeather.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LukeSkywalker92/MMM-DWD-WarnWeather/issues"
+  },
+  "homepage": "https://github.com/LukeSkywalker92/MMM-DWD-WarnWeather#readme",
+  "dependencies": {
+    "request": "^2.78.0",
+    "node-fetch": "2.x"
+  },
+  "devDependencies": {}
+}

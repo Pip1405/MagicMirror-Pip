@@ -1,0 +1,12 @@
+{
+  "root": true,
+  "extends": ["airbnb-typescript-prettier"],
+  "ignorePatterns": ["MMM-Jast.js", "node_helper.js"],
+  "rules": {
+    "import/no-unresolved": "off",
+    "no-continue": "warn",
+    "@typescript-eslint/no-empty-function": "warn",
+    "no-restricted-syntax": "off",
+    "import/no-import-module-exports": "off"
+  }
+}

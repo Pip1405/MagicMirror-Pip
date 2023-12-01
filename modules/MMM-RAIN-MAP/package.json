@@ -1,0 +1,47 @@
+{
+  "name": "mmm-rain-map",
+  "version": "2.9.1",
+  "type": "module",
+  "description": "A Rain Radar Map based on the Rainviewer API for the MagicMirror² platform.",
+  "main": "MMM-RAIN-MAP.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jalibu/MMM-RAIN-MAP.git"
+  },
+  "keywords": [
+    "magicmirror",
+    "weather",
+    "rain",
+    "leaflet",
+    "map",
+    "radar",
+    "clouds"
+  ],
+  "author": "Jan.Litzenburger@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jalibu/MMM-RAIN-MAP/issues"
+  },
+  "homepage": "https://github.com/jalibu/MMM-RAIN-MAP#readme",
+  "scripts": {
+    "build": "rollup -c",
+    "dev": "rollup -c --sourcemap=inline",
+    "dev:watch": "npm run dev -- --watch",
+    "lint": "eslint . && prettier --check .",
+    "lint:fix": "eslint --fix . && prettier --write ."
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^25.0.7",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-terser": "^0.4.4",
+    "@rollup/plugin-typescript": "^11.1.5",
+    "@types/magicmirror-module": "^2.16.5",
+    "eslint": "^8.53.0",
+    "eslint-config-airbnb-typescript-prettier": "^5.0.0",
+    "leaflet": "^1.9.4",
+    "prettier": "^2.8.8",
+    "rollup": "^4.3.0",
+    "rollup-plugin-banner2": "^1.2.2",
+    "typescript": "^5.2.2"
+  }
+}
