@@ -39,11 +39,24 @@
   margin-bottom: 10px;
 }
 
+
 /** HIER ANGEPASST !!!**/ 
 #AVSTOCK .grid-wrapper .stock_item {
-  width: 200px;
+  width: 210px;
   padding: 2px 0px;
   margin-bottom: 5px;
+}
+/** Spezifische Anpassungen für Werte **/
+#AVSTOCK .grid-wrapper .stock_item .change,
+#AVSTOCK .grid-wrapper .stock_item .percentage {
+  font-size: 0.6em; /* Schriftgröße verkleinern */
+  max-width: 60px; /* Maximalbreite festlegen, um Überlauf zu verhindern */
+  white-space: nowrap; /* Verhindern von Umbrüchen */
+  overflow: hidden; /* Überlaufenden Text verbergen */
+  text-overflow: ellipsis; /* '...' anzeigen, wenn Text abgeschnitten wird */
+}
+#AVSTOCK .grid-wrapper .volume {
+  margin-right: 0px
 }
 
 
@@ -65,7 +78,7 @@
   padding-right: 100%;
 }
 
-#AVSTOCK .ticker-wrapper .stock_item {
+@AVSTOCK .ticker-wrapper .stock_item {
   /*width: 110px;*/
 }
 
