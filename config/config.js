@@ -53,7 +53,7 @@ let config = {
     }
 },
             {
-                    //disabled: true,
+                    //disabled: true,  // <= you can disable modules by using this line
                     module: "calendar",
                     header: "Home-Calendar",
                     position: "top_left",
@@ -63,15 +63,16 @@ let config = {
                             {
                               fetchInterval: 7 * 24 * 60 * 60 * 1000,
                              symbol: "calendar-check",
-                              url: "https://p139-caldav.icloud.com/published/2/NDE0NTgzMjUzNDE0NTgzMkBOsXgeZlmdfJEDq41WDh3ohZWpCkiDlE4S6L5lLD7NiEXhgDhThE3ZMqBq0cesTr1RTz1LoMBBsyYTgTTJ0Fc",
-                              color: "#09F38C",
+                              url: "INSERT CALENDAR URL HERE",
+				name: "Private-Calendar", // <= RECOMMENDED to assign name
+                              color: "#09F38C", // <= RECOMMENDED to assign color
 				broadcastPastEvents: true,
                             },
                             {
-                              url: "https://p139-caldav.icloud.com/published/2/NDE0NTgzMjUzNDE0NTgzMkBOsXgeZlmdfJEDq41WDh10mqt2Xx0Cf-r_VZcMWvUIlHuUciwALfmQrjgqNFrljL8Ozw1G-cVsnV0HbOenFmc",
-                              name: "Work-Calendar",
+                              url: "INSERT SECOND CALENDAR URL HERE",
+                              name: "Work-Calendar", // <= RECOMMENDED to assign name
                               symbol: 'calendar',
-                              color: "#0990F3",
+                              color: "#0990F3", // <= RECOMMENDED to assign color
 				broadcastPastEvents: true,
                               },
                               {
@@ -174,15 +175,15 @@ let config = {
 },
 
 {
-  module: 'MMM-Notion',
+  module: 'MMM-Notion', //https://github.com/choffmann/MMM-Notion
   position: 'top right',
   config: {
     updateInterval: 60000,
-    secret: "secret_kXGXkS7hvWwVoFwy8yXZwaUVFeqpjCuqp3Z1pv3JNSR",
+    secret: "SECRET HERE",
     databases: [
       {
         title: "Home-List",
-        id: "e863e8b30e3443418119a38fa5ee0b66",
+        id: "NOTION ID HERE",
         layout: {
           type: "listview",
           showPersonWithNames: true,
@@ -204,7 +205,7 @@ let config = {
       },
       {
         title: "Birthdays",
-        id: "5bfdc3917c5d450d9c5e27c718194ad7",
+        id: "NOTION ID HERE",
         layout: {
           type: "listview",
           displayElementTitle: false,
@@ -237,7 +238,7 @@ let config = {
     classes: "default everyone",
     disabled: false,
     config: {
-      apikey: "de4e2a7e154933dc1c1e61370f9a2f0b",
+      apikey: "OPENWEATHER API KEY HERE",
       language: "de",
       units: "metric",
       hourlyForecastInterval: 2,
@@ -259,7 +260,7 @@ let config = {
     classes: "default everyone",
     disabled: false,
     config: {
-      apikey: "de4e2a7e154933dc1c1e61370f9a2f0b",
+      apikey: "OPENWEATHER API KEY HERE",
       language: "de",
       units: "metric",
       showCurrentConditions: false,
@@ -338,7 +339,7 @@ module: "MMM-WeatherDependentClothes",
 			// See 'Configuration options' for more information.
 			location: "Ludwigsfelde,Germany",
 			locationID: "2875379", //Location ID from http://bulk.openweathermap.org/sample/city.list.json.gz
-			appid: "de4e2a7e154933dc1c1e61370f9a2f0b", //openweathermap.org API key.
+			appid: "OPENWEATHER API KEY HERE", //openweathermap.org API key.
 preferences: [
 			{
 				name: "Freezing",
@@ -485,7 +486,6 @@ preferences: [
 	module: "MMM-AVStock",
 	position: "top_right", // Aktualisierte Position
 	config: {
-	  apiKey: 'YOUR_ALPHA_VANTAGE_API_KEY', // Setzen Sie hier Ihren tatsächlichen API-Key ein.
 	  symbols: ["URTH", "SNPE", "QQQM", "DAX", "JPXN"], // Beispielhafte Symbole für Dow Jones, S&P 500, NASDAQ, FTSE 100, Nikkei 225, DAX
 	  alias: ["MSCI World","S&P 500", "NAS-DAQ", "DAX", "Nikkei 400"],
 	  chartDays: 90,
@@ -501,7 +501,6 @@ preferences: [
 			module: "MMM-AVStock",
 			position: "top right", // Position für das Grid
 			config: {
-			  apiKey: 'YOUR_ALPHA_VANTAGE_API_KEY', // Ersetzen Sie dies durch Ihren persönlichen API-Key.
 			  symbols: ["AAPL", "MSFT", "NFLX", "GOOGL","NVDA"],
 			  chartDays: 90,
 			  chartType: 'candlestick',
@@ -517,7 +516,6 @@ preferences: [
 			module: "MMM-AVStock",
 			position: "top right", // Position für das Grid
 			config: {
-			  apiKey: 'YOUR_ALPHA_VANTAGE_API_KEY', // Ersetzen Sie dies durch Ihren persönlichen API-Key.
 			  symbols: ["AMZN", "PYPL", "TSLA", "BNTX", "JNJ"],
 			  chartDays: 90,
 			  chartType: 'candlestick',
@@ -533,7 +531,6 @@ preferences: [
 			module: "MMM-AVStock",
 			position: "top_right", // Position für das Grid
 			config: {
-			  apiKey: 'YOUR_ALPHA_VANTAGE_API_KEY', // Ersetzen Sie dies durch Ihren persönlichen API-Key.
 			  symbols: ["MTCH", "NEE", "PG", "BTC-USD", "ETH-USD"],
           		  alias: ["MTCH","NEE", "PG", "BTC USD", "ETH USD"], 
 			  chartDays: 90,
@@ -587,10 +584,10 @@ preferences: [
 
 
 {
-  module: "MMM-News",
+  module: "MMM-News", //https://github.com/eouia/MMM-News
   position: "bottom_left",
   config: {
-    apiKey : "16ffedaf0fe346db9a676c41ad5cc7a5",
+    apiKey : "NEWS.ORG API KEY HERE",
     type: "horizontal",
     query : [
       {
@@ -612,8 +609,8 @@ preferences: [
     module: "MMM-Bring",
     position: "bottom_bar",
     config: {
-       email: "wyajqqva9i@privaterelay.appleid.com",
-       password: "P@ssw0rd",
+       email: "BRING EMAIL HERE",
+       password: "PASSWORD HERE",
        updateInterval: 1, // in Minutes
        listName: "Villa kunterbund", // optional
        showListName: true,
